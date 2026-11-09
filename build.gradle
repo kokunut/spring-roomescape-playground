@@ -13,8 +13,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    // 웹 기능: Tomcat 서버 + @GetMapping, @RequestBody 같은 Spring MVC
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // 화면 기능: templates/home.html 같은 HTML 화면 만들기 (Thymeleaf)
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // 테스트용: JUnit, AssertJ 등 스프링 테스트 도구
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // 테스트용: 브라우저 대신 요청을 보내 주는 RestAssured
     testImplementation 'io.rest-assured:rest-assured:5.3.1'
 }
 
